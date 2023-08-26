@@ -1,8 +1,12 @@
 <h1>RISC-V Processor</h1>
 
-A simple 3-stage pipeline RISC-V processor refers to a basic microprocessor design that implements the RISC-V instruction set architecture and employs a 3-stage pipeline structure for instruction execution. The execution of instructions is divided into multiple stages, with each stage handling a specific part of the instruction processing.
+A simple 3-stage pipeline RISC-V processor refers to a basic microprocessor design that implements the RISC-V instruction set architecture and employs a 3-stage pipeline structure for instruction execution. 
+The execution of instructions is divided into multiple stages, with each stage handling a specific part of the instruction processing.
+
+<h3>Block diagram of 3 stage pipelined RISC-V Processor:</h3>
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/31c5c2c9-5e6b-48bb-81ed-4c50ee2d773b)
+
 
 The pipeline stages for a simple 3-stage RISC-V processor typically include:
 1. Fetch Stage (IF - Instruction Fetch): In this stage, the processor fetches the next instruction from memory. The program counter (PC) is used to determine the memory address of the next instruction. The fetched instruction is then sent to the next stage for decoding.
