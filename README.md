@@ -1,14 +1,13 @@
 <h1>RISC-V Processor</h1>
 
-This project involves designing and simulating a simple RISC-V processor using Verilog. The process flows from creating RTL (Register Transfer Level) design to GLS (Gate-Level Simulation) verification. 
+A simple 3-stage pipeline RISC-V processor refers to a basic microprocessor design that implements the RISC-V instruction set architecture and employs a 3-stage pipeline structure for instruction execution, the execution of instructions is divided into multiple stages, with each stage handling a specific part of the instruction processing.
 
-The RISC-V Processor created for this project is a condensed version that only supports the most fundamental instructions. It is capable of loading, subtracting, and performing operations instantly. It includes:
+![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/31c5c2c9-5e6b-48bb-81ed-4c50ee2d773b)
 
--An instruction fetch and decode stage.
-
--A register file for storing 32 registers.
-
--Arithmetic and logical operations.
+The pipeline stages for a simple 3-stage RISC-V processor typically include:
+1. Fetch Stage (IF - Instruction Fetch): In this stage, the processor fetches the next instruction from memory. The program counter (PC) is used to determine the memory address of the next instruction. The fetched instruction is then sent to the next stage for decoding.
+2. Decode and Execute Stage (ID/EX - Instruction Decode/Execute): In this stage, the fetched instruction is decoded to determine the operation to be performed and the operands involved. Register values needed for the operation are also read from the register file. The instruction's operation is executed, which may involve arithmetic, logic, or memory operations. The result of the operation and other control signals are prepared to be passed to the next stage.
+3. Memory and Writeback Stage (MEM/WB - Memory Access/Writeback): In this stage, memory-related operations are performed. For load instructions, data is fetched from memory; for store instructions, data is written to memory. For arithmetic or logic instructions, this stage is not dominant. Finally, the result of the operation is written back to the destination register in the register file.
 
 <h2>Verilog Code</h2>
 
