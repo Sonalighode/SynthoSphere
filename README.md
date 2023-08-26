@@ -197,7 +197,7 @@ After loading the file with ``` read_verilog file_name.v ``` in the correspondin
 
 <h2>Post-synthesis:</h2>
 
-As a part of the post-synthesis, a netlist is created with ``` write_verilog -noattr netlist_file_name.v ```. 
+As a part of the post-synthesis, a netlist is created with ``` write_verilog -noattr netlist_file_name.v ``` command. 
 The waveform is then generatedd with the netlist file.
 
 <h3>Waveforms:</h3>
