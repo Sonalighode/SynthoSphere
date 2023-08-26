@@ -36,10 +36,10 @@ module RISC_V_Processor(
     
     integer i;                                       //variale i used in loop
 
-    always @(posedge i_clk or posedge rst)        //if reset is active high, set 0 to initial values else program counter is incremented by 4 pointing to next instruction          
+    always @(posedge i_clk or posedge rst)          //trigger at positive edge of input clock or reset
     begin
-        if (rst) 
-        begin
+        if (rst)                                   //check if reset is high
+        begin                                      //if true, set 0 to following
             pc <= 0;
             opcode <= 0;
             rs1 <= 0;
@@ -47,10 +47,10 @@ module RISC_V_Processor(
             rd <= 0;
             imm <= 0;
         end 
-        else 
+        else                                      //if reset is low                          
         begin
-            pc <= pc + 4;                            
-            opcode <= i_instr[6:2];
+            pc <= pc + 4;                         //increament program counter by 4                          
+            opcode <= i_instr[6:2];               //instruction bit assignment to opcode and registers.
             rs1 <= i_instr[19:15];
             rs2 <= i_instr[24:20];
             rd <= i_instr[11:7];
@@ -58,33 +58,33 @@ module RISC_V_Processor(
         end
     end
 
-    always @(posedge i_clk or posedge rst)       //if reset is active high, initialize registers in register file to 0 else update the destination register rd with result 
+    always @(posedge i_clk or posedge rst)        //trigger at positive edge of input clock or rest
     begin     
-        if (rst) 
+        if (rst)                                  //check if reset is high
         begin
             for (i = 0; i <= 31; i = i + 1) 
             begin
-                reg_file[i] <= 0;
+                reg_file[i] <= 0;                 //assign 0 to destination register rd if reset is high
             end
         end 
-        else 
+        else                                      //if reset is low
         begin
-            if (rd != 0) 
+            if (rd != 0)                          //check rd value 
             begin
-                reg_file[rd] <= o_result;
+                reg_file[rd] <= o_result;         //assign the rd value to the result
             end
         end
     end
 
-    always @(posedge i_clk or posedge rst)      //if reset is active high, result is cleared to 0 else decode opcode of given instruction and perform the operation
+    always @(posedge i_clk or posedge rst)      //trigger at positive edge of input clock or reset 
     begin     
-        if (rst) 
+        if (rst)                                //check if reset is high 
         begin
-            o_result <= 0;
+            o_result <= 0;                      //if reset high, result is cleared to 0
         end 
-        else 
+        else                                    //if reset is low
         begin
-            case(opcode)
+            case(opcode)                        //using case to decode the opcode of the instruction
                 5'b00000: o_result <= reg_file[rs1] + reg_file[rs2];          // Add
                 5'b00010: o_result <= reg_file[rs1] - reg_file[rs2];          // Subtract
                 5'b01101: o_result <= imm;                                    // Load Immediate
