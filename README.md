@@ -3,9 +3,12 @@
 This project involves designing and simulating a simple RISC-V processor using Verilog. The process flows from RTL (Register Transfer Level) design to GLS (Gate-Level Simulation) verification. 
 
 The RISC-V Processor created for this project is a condensed version that only supports the most fundamental instructions. It is capable of loading, subtracting, and performing operations instantly. It includes:
+
 -An instruction fetch and decode stage.
+
 -A register file for storing 32 registers.
--Arithmetic and logic operations.
+
+-Arithmetic and logical operations.
 
 <h2>Verilog Code</h2>
 
@@ -125,18 +128,22 @@ endmodule
 
 ```
 
-<h2>Pre-synthesis results:</h2>
-
-Waveforms:
-
+The opcode for the given instruction is 5'b00000, which corresponds to the ADD operation. 
+The instruction is ADDI x1, x0, 0, which adds zero to a register. The result of this addition is the register itself and in this case, the result will be 0.
 
 <h2>Pre-synthesis:</h2>
 
-<h3>Waveform synthesis:</h3>
+<h3>Waveform:</h3>
+
+With the given clock and reset signals and the add instruction, the result is obtained.
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/4b1e01b4-4695-4d97-b45d-31b1bb01ac48)
 
+The image below shows the updation of the program counter, registers and result with the input clock, rest signals and the add instruction.
+
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/4d7d838b-9e27-43e0-83d5-b388a092e0ee)
+
+Design requirements:
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/bfdfc365-46bb-4ff5-878e-39471dfa9025)
 
@@ -144,7 +151,7 @@ Waveforms:
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/cb0ec70b-1e4e-47ab-8c47-51157a3ae07b)
 
-<h3>Pictorial representation:</h3>
+<h3>Pictorial representation of the synthesis:</h3>
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/1b7bc502-fa54-4ac2-bc87-4bfcd4a174ce)
 
@@ -156,11 +163,13 @@ Waveforms:
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/589ccecc-d225-4496-9bd5-a93ba36e9f39)
 
+The results of the post and pre-synthesis are coherent.
+
+Design requirements:
+
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/6e0c9689-89cd-4fb8-a74b-79a662ed807b)
 
-![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/33909187-8f9b-46a7-8ff9-b64d9930d1c8)
-
-submodeules:
+<h3>Pictorial representation of the multiple modules:</h3>
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/4605de3d-1ba2-4c08-befb-121dd115e3c8)
 
