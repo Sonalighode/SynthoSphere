@@ -125,18 +125,18 @@ module tb_RISC_V_Processor;
     
     initial 
     begin
-        $dumpfile("riscv0tb.vcd");
+        $dumpfile("riscv0tb.vcd");             //creating dumpfile of .vcd type
         $dumpvars(0, tb_RISC_V_Processor);
-        i_clk = 0;
-        forever #5 i_clk = ~i_clk;
+        i_clk = 0;                              //initialise clock to 0          
+        forever #5 i_clk = ~i_clk;              //toggle every 5ns
     end
 
     initial 
     begin
-        rst = 1;
-        #10 rst = 0;
+        rst = 1;                           //initialise reset as high
+        #10 rst = 0;                       //reset is low after 10ns
 
-        i_instr = 32'h00000013;             //performs ADDI x1, x0, 0
+        i_instr = 32'h00000013;             //hex value assigned to instruction which performs ADDI x1, x0, 0
 
         #100 $finish;
     end
@@ -144,9 +144,9 @@ endmodule
 
 ```
 
-The value of the instruction in hexadecimal 00000013 which in binary is 00000000010000010000000000000011.
+The value of the instruction in hexadecimal is 00000013 which in binary is 00000000010000010000000000000011.
 
-Hence:
+Hence according to the verilog code written:
 
 opcode = 000000 
 
@@ -165,7 +165,11 @@ Below is the corresponding instruction set:
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/2f95fa0d-a998-462d-96ee-25fc2078db12)
 
+The verilog code and test bench are compiled by iVerilog.
+
 <h2>Pre-synthesis:</h2>
+
+After the compilation, a dumpfile of .vcd type is generated with ``` ./a.out ``` command. The dumpfile is then used to perform waveform synthesis by the GTKwave synthesiser.
 
 <h3>Waveforms:</h3>
 
@@ -173,7 +177,7 @@ With the given clock and reset signals and the add instruction, the result is ob
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/4b1e01b4-4695-4d97-b45d-31b1bb01ac48)
 
-The image below shows the updation of the program counter, registers and result with the input clock, reset signals and the add instruction.
+The image below shows the updation of the program counter, registers, and result with the input clock, reset signals, and the add instruction.
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/4d7d838b-9e27-43e0-83d5-b388a092e0ee)
 
