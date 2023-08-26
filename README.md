@@ -43,7 +43,7 @@ module RISC_V_Processor(
     always @(posedge i_clk or posedge rst)          //trigger at positive edge of input clock or reset
     begin
         if (rst)                                   //check if reset is high
-        begin                                      //if true, set 0 to following
+        begin                                      //if true, set 0 to the following ports
             pc <= 0;
             opcode <= 0;
             rs1 <= 0;
