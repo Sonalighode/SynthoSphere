@@ -3,7 +3,7 @@
 A simple 3-stage pipeline RISC-V processor refers to a basic microprocessor design that implements the RISC-V instruction set architecture and employs a 3-stage pipeline structure for instruction execution. 
 The execution of instructions is divided into multiple stages, with each stage handling a specific part of the instruction processing.
 
-<h3>Block diagram of 3 stage pipeline RISC-V Processor:</h3>
+<h3>Block diagram of 3-stage pipeline RISC-V Processor:</h3>
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/31c5c2c9-5e6b-48bb-81ed-4c50ee2d773b)
 
@@ -13,14 +13,14 @@ The pipeline stages for a simple 3-stage RISC-V processor typically include:
 2. Decode and Execute Stage (ID/EX - Instruction Decode/Execute): In this stage, the fetched instruction is decoded to determine the operation to be performed and the operands involved. Register values needed for the operation are also read from the register file. The instruction's operation is executed, which may involve arithmetic, logic, or memory operations. The result of the operation and other control signals are prepared to be passed to the next stage.
 3. Memory and Writeback Stage (MEM/WB - Memory Access/Writeback): In this stage, memory-related operations are performed. For load instructions, data is fetched from memory; for store instructions, data is written to memory. For arithmetic or logic instructions, this stage is not dominant. Finally, the result of the operation is written back to the destination register in the register file.
 
-Steps below involve designing and simulating a simple RISC-V processor using Verilog. The process flows from creating RTL (Register Transfer Level) design to GLS (Gate-Level Simulation) verification. 
+The steps below involve designing and simulating a simple RISC-V processor using Verilog. The process flows from creating RTL (Register Transfer Level) design to GLS (Gate-Level Simulation) verification. 
 
-This process involves use of the following tools:
+This process involves the use of the following tools:
 1. iverilog compiler
 2. GTKwave synthesiser
 3. Yosys synthesis tool
 
-Below is the verilog code and testbench to design the processor to perform fundamental operations of addition, substraction and load/store operations.
+Below is the verilog code and testbench to design the processor to perform fundamental operations of addition, substraction, and load/store operations.
 
 <h2>Verilog Code</h2>
 
@@ -101,7 +101,7 @@ endmodule
 
 ```
 
-Refer the description below for the understanding of the case assignments:
+Refer to the description below for an understanding of the case assignments:
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/089ef9b0-4cc0-48b5-9ed7-a0d5202d2553)
 
@@ -169,17 +169,17 @@ The verilog code and test bench are compiled by iverilog by using the command ``
 
 <h2>Pre-synthesis:</h2>
 
-After the compilation, a dumpfile of .vcd type is generated with ``` ./a.out ``` command. The dumpfile is then used to perform waveform synthesis by the GTKwave synthesiser.
+After the compilation, a dumpfile of .vcd type is generated with ``` ./a.out ``` command. The dumpfile is then used to perform waveform synthesis by the GTKwave synthesizer.
 
 <h3>Waveforms:</h3>
 
 With the given clock and reset signals and the add instruction, the result is obtained.
 
-![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/4b1e01b4-4695-4d97-b45d-31b1bb01ac48)
+![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/b984938b-ae6f-4153-a5be-bb57c050b6cc)
 
 The image below shows the updation of the program counter, registers, and result with the input clock, reset signals, and the add instruction.
 
-![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/4d7d838b-9e27-43e0-83d5-b388a092e0ee)
+![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/bcd319ae-6aa8-464d-98b3-04a292c6d4db)
 
 <h3>Design requirements:</h3>
 
@@ -198,13 +198,13 @@ After loading the file with ``` read_verilog file_name.v ``` in the correspondin
 <h2>Post-synthesis:</h2>
 
 As a part of the post-synthesis, a netlist is created with ``` write_verilog -noattr netlist_file_name.v ``` command. 
-The waveform is then generatedd with the netlist file.
+The waveform is then generated with the netlist file.
 
 <h3>Waveforms:</h3>
 
-![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/48b1427a-0516-4c8a-b667-b23c2041cedf)
+![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/7380c040-8393-4ea6-9595-b7b82dd03d82)
 
-![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/589ccecc-d225-4496-9bd5-a93ba36e9f39)
+![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/c66b25c1-125d-4ea2-a5cb-a0509249e50e)
 
 The waveform results of the post and pre-synthesis are coherent.
 
