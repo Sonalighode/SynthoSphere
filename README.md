@@ -140,7 +140,14 @@ endmodule
 
 ```
 
-The opcode for the given instruction is 5'b00000, which corresponds to the ADD operation. 
+The value of the instruction in hexadecimal 00000013 which in binary is 00000000010000010000000000000011.
+Hence:
+opcode = 000000 
+rs1 = 00000 
+rs2 = 00000
+rd = 00001 
+imm = 0000000000000011 
+Therefore the opcode for the given instruction is 5'b00000, which corresponds to the ADD operation. 
 The instruction is ADDI x1, x0, 0, which adds zero to a register. The result of this addition is the register itself and in this case, the result will be 0.
 
 Below is the corresponding instruction set:
