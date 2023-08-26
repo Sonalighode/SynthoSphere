@@ -16,9 +16,9 @@ The pipeline stages for a simple 3-stage RISC-V processor typically include:
 Steps below involve designing and simulating a simple RISC-V processor using Verilog. The process flows from creating RTL (Register Transfer Level) design to GLS (Gate-Level Simulation) verification. 
 
 This process involves use of following tools:
-1. iVerilog compiler
+1. iverilog compiler
 2. GTKwave synthesiser
-3. yosys synthesis tool
+3. Yosys synthesis tool
 
 Below is the verilog code and testbench to design the processor to perform fundamental operations of addition, substraction and load/store oprations.
 
@@ -165,7 +165,7 @@ Below is the corresponding instruction set:
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/2f95fa0d-a998-462d-96ee-25fc2078db12)
 
-The verilog code and test bench are compiled by iVerilog.
+The verilog code and test bench are compiled by iverilog by using the command ``` iverilog file_name.v testbench_file_name.v ```.
 
 <h2>Pre-synthesis:</h2>
 
@@ -181,7 +181,9 @@ The image below shows the updation of the program counter, registers, and result
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/4d7d838b-9e27-43e0-83d5-b388a092e0ee)
 
-Design requirements:
+<h3>Design requirements:</h3>
+
+After loading the file with ``` read_verilog file_name.v ``` in the corresponding directory, the requirements are obtained by the commands ``` synth -top top_module_name ``` and running the mapping by using the required library.
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/bfdfc365-46bb-4ff5-878e-39471dfa9025)
 
@@ -195,15 +197,18 @@ Design requirements:
 
 <h2>Post-synthesis:</h2>
 
+As a part of the post-synthesis, a netlist is created with ``` write_verilog -noattr netlist_file_name.v ```. 
+The waveform, design requirements, and pictorial representation are obtained similarly as done for the pre-synthesis but with the netlist file generated.
+
 <h3>Waveforms:</h3>
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/48b1427a-0516-4c8a-b667-b23c2041cedf)
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/589ccecc-d225-4496-9bd5-a93ba36e9f39)
 
-The results of the post and pre-synthesis are coherent.
+The waveform results of the post and pre-synthesis are coherent.
 
-Design requirements:
+<h3>Design requirements:</h3>
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/6e0c9689-89cd-4fb8-a74b-79a662ed807b)
 
