@@ -208,15 +208,7 @@ The waveform, design requirements, and pictorial representation are obtained sim
 
 The waveform results of the post and pre-synthesis are coherent.
 
-<h3>Design requirements:</h3>
 
-![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/6e0c9689-89cd-4fb8-a74b-79a662ed807b)
-
-<h3>Pictorial representation of the multiple modules:</h3>
-
-![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/4605de3d-1ba2-4c08-befb-121dd115e3c8)
-
-![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/02c971ac-148e-476a-b129-65b67eb74425)
 
 
 
