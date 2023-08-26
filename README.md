@@ -183,7 +183,7 @@ The image below shows the updation of the program counter, registers, and result
 
 <h3>Design requirements:</h3>
 
-After loading the file with ``` read_verilog file_name.v ``` in the corresponding directory, the design requirements are obtained by the commands ``` synth -top top_module_name ``` and running the mapping by using the required library.
+After loading the file with ``` read_verilog file_name.v ``` in the corresponding directory, the design requirements are obtained by the commands ``` synth -top top_module_name ``` and performing the mapping by using the required library.
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/bfdfc365-46bb-4ff5-878e-39471dfa9025)
 
