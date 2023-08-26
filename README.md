@@ -124,9 +124,51 @@ module tb_RISC_V_Processor;
 endmodule
 
 ```
-<h2>Pre-Synthesis results:</h2>
+
+<h2>Pre-synthesis results:</h2>
+
+Waveforms:
+
+
+<h2>Pre-synthesis:</h2>
 
 <h3>Waveform synthesis:</h3>
+
+![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/4b1e01b4-4695-4d97-b45d-31b1bb01ac48)
+
+![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/4d7d838b-9e27-43e0-83d5-b388a092e0ee)
+
+![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/bfdfc365-46bb-4ff5-878e-39471dfa9025)
+
+![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/07c5fd79-c83d-4411-bd53-3fdef70aa96d)
+
+![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/cb0ec70b-1e4e-47ab-8c47-51157a3ae07b)
+
+<h3>Pictorial representation:</h3>
+
+![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/1b7bc502-fa54-4ac2-bc87-4bfcd4a174ce)
+
+<h2>Post-synthesis:</h2>
+
+<h3>Waveforms:</h3>
+
+![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/48b1427a-0516-4c8a-b667-b23c2041cedf)
+
+![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/589ccecc-d225-4496-9bd5-a93ba36e9f39)
+
+![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/6e0c9689-89cd-4fb8-a74b-79a662ed807b)
+
+![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/33909187-8f9b-46a7-8ff9-b64d9930d1c8)
+
+submodeules:
+
+![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/4605de3d-1ba2-4c08-befb-121dd115e3c8)
+
+![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/02c971ac-148e-476a-b129-65b67eb74425)
+
+
+
+
 
 
 
