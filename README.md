@@ -95,12 +95,11 @@ module RISC_V_Processor(
 
 endmodule
 
+```
+
 Refer the description below for the understanding of the case assignments:
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/089ef9b0-4cc0-48b5-9ed7-a0d5202d2553)
-
-
-```
 
 <h2>Testbench</h2>
 
