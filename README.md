@@ -9,11 +9,14 @@ The pipeline stages for a simple 3-stage RISC-V processor typically include:
 2. Decode and Execute Stage (ID/EX - Instruction Decode/Execute): In this stage, the fetched instruction is decoded to determine the operation to be performed and the operands involved. Register values needed for the operation are also read from the register file. The instruction's operation is executed, which may involve arithmetic, logic, or memory operations. The result of the operation and other control signals are prepared to be passed to the next stage.
 3. Memory and Writeback Stage (MEM/WB - Memory Access/Writeback): In this stage, memory-related operations are performed. For load instructions, data is fetched from memory; for store instructions, data is written to memory. For arithmetic or logic instructions, this stage is not dominant. Finally, the result of the operation is written back to the destination register in the register file.
 
-Steps below involves designing and simulating a simple RISC-V processor using Verilog. The process flows from creating RTL (Register Transfer Level) design to GLS (Gate-Level Simulation) verification. 
+Steps below involve designing and simulating a simple RISC-V processor using Verilog. The process flows from creating RTL (Register Transfer Level) design to GLS (Gate-Level Simulation) verification. 
+
 This process involves use of following tools:
 1. iVerilog compiler
 2. GTKwave synthesiser
 3. yosys synthesis tool
+
+Below is the verilog code and testbench to design the processor to perform fundamental operations of addition, substraction and load/store oprations.
 
 <h2>Verilog Code</h2>
 
@@ -135,6 +138,10 @@ endmodule
 
 The opcode for the given instruction is 5'b00000, which corresponds to the ADD operation. 
 The instruction is ADDI x1, x0, 0, which adds zero to a register. The result of this addition is the register itself and in this case, the result will be 0.
+
+Below is the corresponding instruction set:
+
+![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/2f95fa0d-a998-462d-96ee-25fc2078db12)
 
 <h2>Pre-synthesis:</h2>
 
