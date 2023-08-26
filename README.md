@@ -1,6 +1,6 @@
 <h1>RISC-V Processor</h1>
 
-This project involves designing and simulating a simple RISC-V processor using Verilog. The process flows from RTL (Register Transfer Level) design to GLS (Gate-Level Simulation) verification. 
+This project involves designing and simulating a simple RISC-V processor using Verilog. The process flows from creating RTL (Register Transfer Level) design to GLS (Gate-Level Simulation) verification. 
 
 The RISC-V Processor created for this project is a condensed version that only supports the most fundamental instructions. It is capable of loading, subtracting, and performing operations instantly. It includes:
 
@@ -133,13 +133,13 @@ The instruction is ADDI x1, x0, 0, which adds zero to a register. The result of 
 
 <h2>Pre-synthesis:</h2>
 
-<h3>Waveform:</h3>
+<h3>Waveforms:</h3>
 
 With the given clock and reset signals and the add instruction, the result is obtained.
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/4b1e01b4-4695-4d97-b45d-31b1bb01ac48)
 
-The image below shows the updation of the program counter, registers and result with the input clock, rest signals and the add instruction.
+The image below shows the updation of the program counter, registers and result with the input clock, reset signals and the add instruction.
 
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/4d7d838b-9e27-43e0-83d5-b388a092e0ee)
 
