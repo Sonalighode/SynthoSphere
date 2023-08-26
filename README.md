@@ -20,7 +20,7 @@ This process involves use of the following tools:
 2. GTKwave synthesiser
 3. Yosys synthesis tool
 
-Below is the verilog code and testbench to design the processor to perform fundamental operations of addition, substraction and load/store oprations.
+Below is the verilog code and testbench to design the processor to perform fundamental operations of addition, substraction and load/store operations.
 
 <h2>Verilog Code</h2>
 
