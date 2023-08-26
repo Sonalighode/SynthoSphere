@@ -9,6 +9,12 @@ The pipeline stages for a simple 3-stage RISC-V processor typically include:
 2. Decode and Execute Stage (ID/EX - Instruction Decode/Execute): In this stage, the fetched instruction is decoded to determine the operation to be performed and the operands involved. Register values needed for the operation are also read from the register file. The instruction's operation is executed, which may involve arithmetic, logic, or memory operations. The result of the operation and other control signals are prepared to be passed to the next stage.
 3. Memory and Writeback Stage (MEM/WB - Memory Access/Writeback): In this stage, memory-related operations are performed. For load instructions, data is fetched from memory; for store instructions, data is written to memory. For arithmetic or logic instructions, this stage is not dominant. Finally, the result of the operation is written back to the destination register in the register file.
 
+Steps below involves designing and simulating a simple RISC-V processor using Verilog. The process flows from creating RTL (Register Transfer Level) design to GLS (Gate-Level Simulation) verification. 
+This process involves use of following tools:
+1. iVerilog compiler
+2. GTKwave synthesiser
+3. yosys synthesis tool
+
 <h2>Verilog Code</h2>
 
 ```
