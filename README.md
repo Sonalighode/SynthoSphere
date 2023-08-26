@@ -15,7 +15,7 @@ The pipeline stages for a simple 3-stage RISC-V processor typically include:
 
 Steps below involve designing and simulating a simple RISC-V processor using Verilog. The process flows from creating RTL (Register Transfer Level) design to GLS (Gate-Level Simulation) verification. 
 
-This process involves use of following tools:
+This process involves use of the following tools:
 1. iverilog compiler
 2. GTKwave synthesiser
 3. Yosys synthesis tool
