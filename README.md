@@ -38,7 +38,7 @@ module RISC_V_Processor(
     reg [31:0] imm;                                  //immediate value extracted from instruction
     reg [31:0] reg_file [31:0];                      //register file
     
-    integer i;                                       //variale i used in loop
+    integer i;                                       /variable i used in the loop
 
     always @(posedge i_clk or posedge rst)          //trigger at positive edge of input clock or reset
     begin
@@ -53,22 +53,22 @@ module RISC_V_Processor(
         end 
         else                                      //if reset is low                          
         begin
-            pc <= pc + 4;                         //increament program counter by 4                          
-            opcode <= i_instr[6:2];               //instruction bit assignment to opcode and registers.
-            rs1 <= i_instr[19:15];
-            rs2 <= i_instr[24:20];
-            rd <= i_instr[11:7];
-            imm <= i_instr[31:20];
+            pc <= pc + 4;                         /increment program counter by 4                          
+            opcode <= i_instr[6:2];               //[6:2] bits of the instruction bare assigned to opcode 
+            rs1 <= i_instr[19:15];                //[19:15] bits of the instruction are assigned to the source register rs1
+            rs2 <= i_instr[24:20];                //[24:20] bits of the instruction are assigned to the source register rs2
+            rd <= i_instr[11:7];                  //[11:7] bits of the instruction are assigned to the destination register rd
+            imm <= i_instr[31:20];                //[31:20] bits of the instruction are assigned to immediate value
         end
     end
 
-    always @(posedge i_clk or posedge rst)        //trigger at positive edge of input clock or rest
+    always @(posedge i_clk or posedge rst)        //trigger at the positive edge of the input clock or reset
     begin     
         if (rst)                                  //check if reset is high
         begin
             for (i = 0; i <= 31; i = i + 1) 
             begin
-                reg_file[i] <= 0;                 //assign 0 to destination register rd if reset is high
+                reg_file[i] <= 0;                 //assign 0 to destination register rd if reset is high using for loop
             end
         end 
         else                                      //if reset is low
@@ -80,11 +80,11 @@ module RISC_V_Processor(
         end
     end
 
-    always @(posedge i_clk or posedge rst)      //trigger at positive edge of input clock or reset 
+    always @(posedge i_clk or posedge rst)      //trigger at the positive edge of the input clock or reset 
     begin     
         if (rst)                                //check if reset is high 
         begin
-            o_result <= 0;                      //if reset high, result is cleared to 0
+            o_result <= 0;                      //if reset high, the result is cleared to 0
         end 
         else                                    //if reset is low
         begin
