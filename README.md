@@ -1,4 +1,4 @@
-<h1>RISC-V Processor</h1>
+<h1> 3-Stage Pipeline RISC-V Processor</h1>
 
 A simple 3-stage pipeline RISC-V processor refers to a basic microprocessor design that implements the RISC-V instruction set architecture and employs a 3-stage pipeline structure for instruction execution. 
 The execution of instructions is divided into multiple stages, with each stage handling a specific part of the instruction processing.
@@ -14,6 +14,8 @@ The pipeline stages for a simple 3-stage RISC-V processor typically include:
 3. Memory and Writeback Stage (MEM/WB - Memory Access/Writeback): In this stage, memory-related operations are performed. For load instructions, data is fetched from memory; for store instructions, data is written to memory. For arithmetic or logic instructions, this stage is not dominant. Finally, the result of the operation is written back to the destination register in the register file.
 
 The steps below involve designing and simulating a simple RISC-V processor using Verilog. The process flows from creating RTL (Register Transfer Level) design to GLS (Gate-Level Simulation) verification. 
+
+<h2>Pre-synthesis:</h2>
 
 This process involves the use of the following tools:
 1. iverilog compiler
@@ -166,8 +168,6 @@ Below is the corresponding instruction set:
 ![image](https://github.com/Sonalighode/SynthoSphere/assets/125658017/2f95fa0d-a998-462d-96ee-25fc2078db12)
 
 The verilog code and test bench are compiled by iverilog by using the command ``` iverilog file_name.v testbench_file_name.v ```.
-
-<h2>Pre-synthesis:</h2>
 
 After the compilation, a dumpfile of .vcd type is generated with ``` ./a.out ``` command. The dumpfile is then used to perform waveform synthesis by the GTKwave synthesizer.
 
